@@ -5,6 +5,8 @@ const express = require("express");
 const morgan = require("morgan");
 const port = process.env.PORT;
 
+const projects = require("./data/projects.json")
+
 
 // CREATE EXPRESS APP
 // Here you should create your Express app:
@@ -31,6 +33,9 @@ app.get("/blog", (req, res) => {
     res.sendFile(__dirname + "/views/blog.html")
 })
 
+app.get("/api/projects", (req, res) => {
+    res.json(projects)
+})
 
 // START THE SERVER
 // Make your Express server listen on port 5005:
