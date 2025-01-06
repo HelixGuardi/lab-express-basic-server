@@ -6,6 +6,7 @@ const morgan = require("morgan");
 const port = process.env.PORT;
 
 const projects = require("./data/projects.json")
+const articles = require("./data/articles.json")
 
 
 // CREATE EXPRESS APP
@@ -35,6 +36,10 @@ app.get("/blog", (req, res) => {
 
 app.get("/api/projects", (req, res) => {
     res.json(projects)
+})
+
+app.get("/api/articles", (req, res) => {
+    res.json(articles)
 })
 
 // START THE SERVER
