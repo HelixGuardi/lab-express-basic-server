@@ -1,7 +1,8 @@
 // IMPORT PACKAGES
 // Here you should import the required packages for your Express app: `express` and `morgan`
+require('dotenv').config()
 const express = require("express");
-const morgan = requiere("morgan");
+const morgan = require("morgan");
 const port = process.env.PORT;
 
 
